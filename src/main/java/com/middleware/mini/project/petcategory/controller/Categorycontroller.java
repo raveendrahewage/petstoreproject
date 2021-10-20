@@ -49,7 +49,7 @@ public class Categorycontroller {
     }
 
     @PUT
-    @Path("update-category/{id}")
+    @Path("{id}")
     @Consumes(MediaType.APPLICATION_JSON)
     public Response updateCategoryById(@PathParam("id") long id,CategoryDTO dto){
         return categoryService.updateCategory(dto,id)
@@ -57,5 +57,15 @@ public class Categorycontroller {
             Response.status(Response.Status.OK).build()
             :
             Response.status(Response.Status.BAD_REQUEST).build();
+    }
+
+    @DELETE
+    @Path("{id}")
+    public Response deleteCategoryById(@PathParam("id") long id){
+        return categoryService.deleteCategory(id)
+                ?
+                Response.status(Response.Status.OK).build()
+                :
+                Response.status(Response.Status.BAD_REQUEST).build();
     }
 }

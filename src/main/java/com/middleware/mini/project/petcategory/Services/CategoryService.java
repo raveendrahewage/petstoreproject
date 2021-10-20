@@ -81,4 +81,9 @@ public class CategoryService {
         }
         return true;
     }
+
+    public boolean deleteCategory(long id){
+        Category categoryById=categoryRepository.findById((id));
+        return categoryById != null && categoryRepository.deleteById(categoryById.getTypeId());
+    }
 }
