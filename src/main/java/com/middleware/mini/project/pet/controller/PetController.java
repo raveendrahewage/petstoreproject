@@ -1,6 +1,9 @@
-package com.middleware.mini.project.petcategory.controller;
+package com.middleware.mini.project.pet.controller;
 
+import com.middleware.mini.project.pet.DTO.PetDTO;
+import com.middleware.mini.project.pet.Service.PetService;
 import com.middleware.mini.project.petcategory.DTO.CategoryDTO;
+import com.middleware.mini.project.petcategory.Entity.Category;
 import com.middleware.mini.project.petcategory.Services.CategoryService;
 
 import javax.inject.Inject;
@@ -9,17 +12,16 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
-@Path("pet-category")
-public class Categorycontroller {
-
+@Path("pet")
+public class PetController {
     @Inject
-    private CategoryService categoryService;
+    private PetService petService;
 
     @POST
-    @Path("add-category")
+    @Path("add-pet")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response addCategory(CategoryDTO categoryDTO){
-        return categoryService.addCategoryType(categoryDTO)
+    public Response addCategory(PetDTO petDTO){
+        return petService.addPet(petDTO)
                 ?
                 Response.status(Response.Status.OK).build()
                 :
@@ -30,18 +32,18 @@ public class Categorycontroller {
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getCategoryById(@PathParam("id") long id){
-        CategoryDTO typeById = categoryService.getCategoryById(id);
-        return typeById==null
+        PetDTO petById = petService.getPetById(id);
+        return petById==null
                 ?
                 Response.status(Response.Status.BAD_REQUEST).build()
                 :
-                Response.ok(typeById).status(Response.Status.OK).build();
+                Response.ok(petById).status(Response.Status.OK).build();
     }
 
     @GET
     @Path("/")
-    public Response getAllCategories(){
-        List<CategoryDTO> all = categoryService.getAllCategories();
+    public Response getAllPets(){
+        List<PetDTO> all = petService.getAllPets();
         return all.isEmpty()
                 ?
                 Response.status(Response.Status.BAD_REQUEST).build()
@@ -52,18 +54,18 @@ public class Categorycontroller {
     @PUT
     @Path("{id}")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response updateCategoryById(@PathParam("id") long id,CategoryDTO dto){
-        return categoryService.updateCategory(dto,id)
-            ?
-            Response.status(Response.Status.OK).build()
-            :
-            Response.status(Response.Status.BAD_REQUEST).build();
+    public Response updatePetById(@PathParam("id") long id,PetDTO dto){
+        return petService.updatePet(dto,id)
+                ?
+                Response.status(Response.Status.OK).build()
+                :
+                Response.status(Response.Status.BAD_REQUEST).build();
     }
 
     @DELETE
     @Path("{id}")
-    public Response deleteCategoryById(@PathParam("id") long id){
-        return categoryService.deleteCategory(id)
+    public Response deletePetById(@PathParam("id") long id){
+        return petService.deletePet(id)
                 ?
                 Response.status(Response.Status.OK).build()
                 :

@@ -2,8 +2,7 @@ package com.middleware.mini.project.petcategory.Services;
 
 import com.middleware.mini.project.petcategory.DTO.CategoryDTO;
 import com.middleware.mini.project.petcategory.Entity.Category;
-import com.middleware.mini.project.petcategory.Entity.CategoryRepository;
-import io.quarkus.hibernate.orm.panache.PanacheQuery;
+import com.middleware.mini.project.petcategory.Entity.Repository.CategoryRepository;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -67,16 +66,16 @@ public class CategoryService {
 
     @Transactional
     private boolean setCategory(CategoryDTO dto ,Category categoryById){
-        if(dto.getName() !="" && dto.getName()!=null){
+        if(!dto.getName().equals("") && dto.getName()!=null){
             categoryById.setName(dto.getName());
         }
-        if(dto.getDynasty() !="" && dto.getDynasty()!=null){
+        if(!dto.getDynasty().equals("") && dto.getDynasty()!=null){
             categoryById.setDynasty(dto.getDynasty());
         }
-        if(dto.getRegion() !="" && dto.getRegion()!=null){
+        if(!dto.getRegion().equals("") && dto.getRegion()!=null){
             categoryById.setRegion(dto.getRegion());
         }
-        if(dto.getScientificName() !="" && dto.getScientificName()!=null){
+        if(!dto.getScientificName().equals("") && dto.getScientificName()!=null){
             categoryById.setScientificName(dto.getScientificName());
         }
         return true;
