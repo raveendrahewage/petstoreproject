@@ -102,4 +102,17 @@ public class PetService {
         Pets petById=petsRepository.findById((id));
         return petById != null && petsRepository.deleteById(petById.getPetId());
     }
+
+    public java.util.List<PetDTO> searchAll(String content){
+        return petsRepository.list("SELECT m FROM Pets m WHERE m.gender LIKE ?1 OR m.petName LIKE ?1 OR m.owner LIKE ?1",content+"%").stream().map(pet ->new PetDTO(
+                pet.getPetId(),
+                pet.getCategory().getTypeId(),
+                pet.getPetName(),
+                pet.getBirthday(),
+                pet.getGender(),
+                pet.getOwner(),
+                pet.getWeight()
+        )).collect(Collectors.toList());
+    }
+
 }

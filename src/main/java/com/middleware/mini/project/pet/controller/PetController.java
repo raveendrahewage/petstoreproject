@@ -20,7 +20,7 @@ public class PetController {
     @POST
     @Path("add-pet")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response addCategory(PetDTO petDTO){
+    public Response addPet(PetDTO petDTO){
         return petService.addPet(petDTO)
                 ?
                 Response.status(Response.Status.OK).build()
@@ -31,7 +31,7 @@ public class PetController {
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getCategoryById(@PathParam("id") long id){
+    public Response getPetById(@PathParam("id") long id){
         PetDTO petById = petService.getPetById(id);
         return petById==null
                 ?
@@ -70,5 +70,16 @@ public class PetController {
                 Response.status(Response.Status.OK).build()
                 :
                 Response.status(Response.Status.BAD_REQUEST).build();
+    }
+
+    @GET
+    @Path("/search-all")
+    public Response searchAll(@QueryParam("content") String content){
+        List<PetDTO> allByContent = petService.searchAll(content);
+        return allByContent.isEmpty()
+                ?
+                Response.status(Response.Status.BAD_REQUEST).build()
+                :
+                Response.ok(allByContent).build();
     }
 }
