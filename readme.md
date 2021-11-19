@@ -12,7 +12,7 @@
 ## ``(POST) /data/pet-category/add-category/``
 
 
-###*Adding a new category(pet type).*
+### *Adding a new category(pet type).*
 
 
 ###  curl -X 'POST' \
@@ -28,10 +28,10 @@
 ---
 
 
-##``(GET) /data/pet-category/{id}``
+## ``(GET) /data/pet-category/{id}``
 
 
-###*Getting the data of a category by ID.*
+### *Getting the data of a category by ID.*
 
 
 ###  curl -X 'DELETE' \
@@ -44,10 +44,10 @@
 ---
 
 
-##``(GET) /data/pet-category/``
+## ``(GET) /data/pet-category/``
 
 
-###*Getting all categories as a list.*
+### *Getting all categories as a list.*
 
 
 ###  curl -X 'GET' \
@@ -60,10 +60,10 @@
 ---
 
 
-##``(PUT) /data/pet-category/{id}``
+## ``(PUT) /data/pet-category/{id}``
 
 
-###*Updating a category by ID.*
+### *Updating a category by ID.*
 
 
 ###  curl -X 'PUT' \
@@ -83,10 +83,10 @@
 ---
 
 
-##``(DELETE) /data/pet-category/{id}``
+## ``(DELETE) /data/pet-category/{id}``
 
 
-###*Deleting a category by ID.*
+### *Deleting a category by ID.*
 
 
 ###  curl -X 'DELETE' \
@@ -102,10 +102,10 @@
 ## PetController Endpoints
 
 
-##``(POST) /data/pet/add-pet/``
+## ``(POST) /data/pet/add-pet/``
 
 
-###*Adding the pet into the database.*
+### *Adding the pet into the database.*
 
 
 ### curl -X 'POST' \
@@ -127,10 +127,10 @@
 ---
 
 
-##``(GET) /data/pet/{id}``
+## ``(GET) /data/pet/{id}``
 
 
-###*Getting the data of a certain pet by ID.*
+### *Getting the data of a certain pet by ID.*
 
 
 ###  curl -X 'GET' \
@@ -143,10 +143,10 @@
 ---
 
 
-##``(GET) /data/pet/``
+## ``(GET) /data/pet/``
 
 
-###*Getting all pets as a list.*
+### *Getting all pets as a list.*
 
 
 ###  curl -X 'GET' \
@@ -159,10 +159,10 @@
 ---
 
 
-##``(PUT) /data/pet/{id}``
+## ``(PUT) /data/pet/{id}``
 
 
-###*Updating certain pet by the ID.*
+### *Updating certain pet by the ID.*
 
 
 ###  curl -X 'PUT' \
@@ -183,10 +183,10 @@
 ---
 
 
-##``(DELETE) /data/pet/{id}``
+## ``(DELETE) /data/pet/{id}``
 
 
-###*Deleting certain pet by ID.*
+### *Deleting certain pet by ID.*
 
 
 ###  curl -X 'DELETE' \
@@ -199,10 +199,10 @@
 ---
 
 
-##``(GET) /data/pet/search-all?content={Pinky}``
+## ``(GET) /data/pet/search-all?content={Pinky}``
 
 
-###*Searching a pet by pet name, gender or owner.*
+### *Searching a pet by pet name, gender or owner.*
 
 
 ###  curl -X 'GET' \
