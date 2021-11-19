@@ -210,3 +210,29 @@
 
     'http://localhost:8080/data/pet/search-all?content=Pinky' \
     -H 'accept: */*'
+
+
+## Deployment
+
+
+- ### *Clone the project on your local machine.*
+- ### *Mysql server should be setup and run on your computer in port 3306.*
+- ### *Open the project with Intellij IDE or any other IDE.*
+- ### *Click on the Run button.*
+
+
+## Testing
+
+
+- ### *Run the project first*
+
+
+- ### *Go to ``CategoryControllerTest.java``*
+
+- ### *Click the play mark near the left-hand side of the class definition.*
+
+
+- ### *Then go to ``PetControllerTest.java``*
+
+
+- ### *Click the play mark near the left-hand side of the class definition.*
