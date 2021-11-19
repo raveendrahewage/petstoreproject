@@ -2,10 +2,10 @@
 
 ## Introduction
 
-**This is an API that I have developed for a Pet Store using the Quarkus. Here I have used some openApi specification for generating the swagger documentation and some annotations of that for modifying the swagger documentation.**
+### **This is an API that I have developed for a Pet Store using the Quarkus. Here I have used some openApi specification for generating the swagger documentation and some annotations of that for modifying the swagger documentation.**
 
 
-**Link for the swagger documentation : http://localhost:8080/q/swagger-ui/**
+### **Link for the swagger documentation : http://localhost:8080/q/swagger-ui/**
 
 ## CategoryController Endpoints
 
