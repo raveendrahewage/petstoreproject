@@ -15,7 +15,7 @@
 ### *Adding a new category(pet type).*
 
 
-###  curl -X 'POST' \
+    curl -X 'POST' \
     'http://localhost:8080/data/pet-category/add-type' \
     -H 'accept: */*' \
     -H 'Content-Type: application/json' \
@@ -34,9 +34,7 @@
 ### *Getting the data of a category by ID.*
 
 
-###  curl -X 'DELETE' \
-
-
+    curl -X 'DELETE' \
     'http://localhost:8080/data/pet-category/' \
     -H 'accept: */*'
 
@@ -50,9 +48,7 @@
 ### *Getting all categories as a list.*
 
 
-###  curl -X 'GET' \
-
-
+    curl -X 'GET' \
     'http://localhost:8080/data/pet-category/' \
     -H 'accept: */*'
 
@@ -66,9 +62,7 @@
 ### *Updating a category by ID.*
 
 
-###  curl -X 'PUT' \
-
-
+    curl -X 'PUT' \
     'http://localhost:8080/data/pet-category/1' \
     -H 'accept: */*' \
     -H 'Content-Type: application/json' \
@@ -89,9 +83,7 @@
 ### *Deleting a category by ID.*
 
 
-###  curl -X 'DELETE' \
-
-
+    curl -X 'DELETE' \
     'http://localhost:8080/data/pet-category/1' \
     -H 'accept: */*'
 
@@ -108,9 +100,7 @@
 ### *Adding the pet into the database.*
 
 
-### curl -X 'POST' \
-
-
+    curl -X 'POST' \
     'http://localhost:8080/data/pet/add' \
     -H 'accept: */*' \
     -H 'Content-Type: application/json' \
@@ -133,9 +123,7 @@
 ### *Getting the data of a certain pet by ID.*
 
 
-###  curl -X 'GET' \
-
-
+    curl -X 'GET' \
     'http://localhost:8080/data/pet/1' \
     -H 'accept: */*'
 
@@ -149,9 +137,7 @@
 ### *Getting all pets as a list.*
 
 
-###  curl -X 'GET' \
-
-
+    curl -X 'GET' \
     'http://localhost:8080/data/pet' \
     -H 'accept: */*'
 
@@ -165,9 +151,7 @@
 ### *Updating certain pet by the ID.*
 
 
-###  curl -X 'PUT' \
-
-
+    curl -X 'PUT' \
     'http://localhost:8080/data/pet/1' \
     -H 'accept: */*' \
     -H 'Content-Type: application/json' \
@@ -189,9 +173,7 @@
 ### *Deleting certain pet by ID.*
 
 
-###  curl -X 'DELETE' \
-
-
+    curl -X 'DELETE' \
     'http://localhost:8080/data/pet/delete/1' \
     -H 'accept: */*'
 
@@ -205,9 +187,7 @@
 ### *Searching a pet by pet name, gender or owner.*
 
 
-###  curl -X 'GET' \
-
-
+    curl -X 'GET' \
     'http://localhost:8080/data/pet/search-all?content=Pinky' \
     -H 'accept: */*'
 
